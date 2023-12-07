@@ -74,7 +74,7 @@ def run_server():
             is_avro=False,
         ),
         KafkaConsumer(
-            "publictransit.Station",
+            "^publictransit.Station.*",
             lines.process_message,
             offset_earliest=True,
             consume_timeout=1,

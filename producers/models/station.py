@@ -29,7 +29,7 @@ class Station(Producer):
             .replace("-", "_")
             .replace("'", "")
         )
-        topic_name = f"publictransit.Station"
+        topic_name = f"publictransit.Station.{station_name}"
         super().__init__(
             topic_name,
             key_schema=Station.key_schema,
